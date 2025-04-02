@@ -2,7 +2,7 @@ import React from 'react'
 import './order.css'
 
 
-function order() {
+function order({URL}) {
   return (
     <div>order</div>
   )
