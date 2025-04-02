@@ -3,6 +3,11 @@ import cors from "cors"
 import {connectDB} from "./config/db.js"
 import foodModel from './models/foodModel.js'
 import foodRouter from './routes/foodRoute.js'
+import userRouter from './routes/userRoutes.js'
+import 'dotenv/config'
+
+
+
 // app config 
 const app = express() 
 const port = 4000
@@ -19,7 +24,7 @@ app.use(express.json())
 
 app.use("/api/food",foodRouter)
 app.use("/images",express.static('uploads'))
-
+app.use("/api/user",userRouter)
 
 
  app.get("/",(req,res)=>{
